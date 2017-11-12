@@ -1,0 +1,5 @@
+rootProject.name = 'jelly'
+include 'common'
+include 'greeter'
+include 'router'
+

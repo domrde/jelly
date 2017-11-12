@@ -1,0 +1,29 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+}
+
+project(":common") {
+}
+
+project(":greeter") {
+    dependencies {
+        compile project(':common')
+    }
+}
+
+project(":router") {
+    dependencies {
+        compile project(':common')
+    }
+}
